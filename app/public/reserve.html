@@ -11,113 +11,83 @@
         
 <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<link rel="stylesheet" href="assets/css/bootstrap.css">
-		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		<!-- <link rel="stylesheet" href="assets/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
+        <script src="https://code.jquery.com/jquery.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
 	</head>
 	<body>
 
 		<!-- Body -->
-<div class="container">
-	<div class="jumbotron">
-		<h1 class="text-center">
-			<span class="glyphicon glyphicon-fire"></span> Hot Restaurant</h1>
-		<h2 class="text-center">Make your Reservation</h2>
-		<div class="text-center">
+        <div class="container">
 
-			<a href="/tables" class="btn btn-primary btn-lg">View Tables</a>
+            <div class="jumbotron">
+                <h1 class="text-center"><span class="glyphicon glyphicon-fire"></span> Hot Restaurant</h1>
+                <hr>
+                <h2 class="text-center">Make your reservation</h2>
+                <br>
+    
+                <div class="text-center">
+                    <a href="/tables"><button type="button" class="btn btn-lg btn-primary"><span class="glyphicon glyphicon-list-alt"></span> View Tables</button></a>
+                    <a href="/"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
+                </div>
+            </div>
+    
+            <div class="row">
+                <div class="col-lg-12">
+    
+                    <!-- Reservation Page -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">Table Reservation</h4>
+                        </div>
+                        <div class="panel-body">
+    
+                            <form role="form">
+    
+                                <div class="form-group">
+                                    <label for="">Name</label>
+                                    <input type="text" class="form-control" id="reserve_name">
+                                </div>
+    
+                                <div class="form-group">
+                                    <label for="">Phone Number</label>
+                                    <input type="text" class="form-control" id="reserve_phone">
+                                </div>
+    
+                                <div class="form-group">
+                                    <label for="">Email</label>
+                                    <input type="text" class="form-control" id="reserve_email">
+                                </div>
+    
+                                <div class="form-group">
+                                    <label for="">Unique ID</label>
+                                    <input type="text" class="form-control" id="reserve_uniqueID">
+                                </div>
+    
+                                <button type="submit" class="btn btn-primary submit">Submit</button>
+                            </form>
+    
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+    
+    
+            <footer class="footer">
+              <div class="container">
+                <p><a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a> </p>
+              </div>
+            </footer>
+    
+        </div>
+    
+    </body>
+    </html>
 
-			<a href="/" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span> </a>
-		</div>
-	</div>
+    <!-- BELOW CODE IS CRITICAL. IT HANDLES HOW FORM DATA IS SENT TO OUR SERVER -->
+<script type="text/javascript">
 
-	<div class="row">
-		<div class="col-lg-12">
-			<div class="panel panel-default">
-				<div class= "panel-heading">
-					<h4 class="panel-title">Table Reservation </h4>
-				</div>
-
-			<div class="panel-body">
-
-				<form role="form">
-
-					<div class="form-group">
-							<label for="">Name</label>
-							<input type="text" class="form-control" id="reserve_name">
-					</div>
-
-					<div class="form-group">
-							<label for="">Phone number</label>
-							<input type="text" class="form-control" id="reserve_phone">
-					</div>
-
-					<div class="form-group">
-							<label for="">Email</label>
-							<input type="text" class="form-control" id="reserve_email">
-					</div>
-
-					<div class="form-group">
-							<label for="">Unique ID</label>
-							<input type="text" class="form-control" id="reserve_identifier">
-					</div>
-
-					<button type="submit" class="btn btn-primary submit" id="submitbtn">Submit</button>
-				</form>
-
-			</div>
-
-			</div>
-	</div>
-</div>
-
-
-		<div class="container">
-			<div class="row">
-				<div class="col-sm-12 col-md-12 col-lg-12">
-
-				</div>
-				<div class="col-sm-12 col-md-12 col-lg-12">
-
-				</div>
-			</div>
-
-
-		</div>
-
-
-		<script src="assets/js/jquery-3.1.0.js"></script>
-		<script src="assets/js/bootstrap.min.js"></script>
-		<script src="text/javascript">
-		var settings = {
-  	"async": true,
-  	"crossDomain": true,
-  	"url": "http://localhost:3000/api/new",
-  	"method": "POST",
-  	"headers": {
-    "content-type": "application/json",
-    "cache-control": "no-cache",
-    "postman-token": "271ff076-8fa2-e798-6699-d3491cef1d20"
-  	},
-  	"processData": false,
-  	"data": "{\n    \"customerName\": \"Jonathan Arellano\",\n    \"phoneNumber\": \"455-343-4344\",\n    \"customerEmail\": \"NeverHacked@yahoo.com\",\n    \"customerID\": \"44953\"\n  }"
-		}
-
-$.ajax(settings).done(function (response) {
-  console.log(response);
-
-		function displayGuests() {
-			var guestName = $("#reserve_name").val();
-			var guestNumber = $("#reserve_number").val();
-			var guestEmail = $("#reserve_number").val();
-			var guestIdentifier = $("#reserve_identifier").val();
-
-			$("#submitbtn").click(function(){
-				alert("Thank you for your reservation!");
-			});
-		}
-
-});
-
-		</script>
-	</body>
-</html>
+</script>    

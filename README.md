@@ -1,5 +1,6 @@
 # Hot-Restaurant
-Take  reservations or put people on a waiting list.  Also make new reservations and go back home from any page.  When server is restarted, the reservations will disappear because data is living only on the server, it is not hard coded.  With this application, the goal is to have the front and the back end talk to each other. 
+With this application, the goal is to have the front and the back end talk to each other. 
+Take  reservations or put people on a waiting list.  Also make new reservations and go back home from any page.  When server is restarted, the reservations will disappear because data is living only on the server, it is not hard coded.  
 
 # Getting Started
 ![](coffe.jpg)
@@ -8,16 +9,13 @@ Take  reservations or put people on a waiting list.  Also make new reservations 
 # Basic Structure
 Data and logic live on the Node server.  Routes make the data and logic accessible.  Ajax is used on those routes to push changes on the client front end side.
 
-# Prerequisites
-* Set up the server with server.js file.
-* $ npm init
-* $ npm install body-parser express --save
-* This will create a node_modules folder as well as a Json format.
-* When building .html files  USE: [hot-restaurant.herokuapp.com](http://hot-restaurant.herokuapp.com/) View Page Source code or you may create your own.  
+# To install
+* Git Clone the repository
+* Navigate to the folder where the repository exists
+* Run the command $ npm init
+* Run the command $ npm install body-parser express --save
+* Then run the command $ node server.js
 
-
-# Deployment
-* Terminal start with node server.js
 * Browser start with search for localhost:8080 
     * NOTE: started with [app.listen(3000)](https://expressjs.com/en/starter/hello-world.html) from express documentation but changed to var PORT = process.env.PORT || 8080
 
@@ -28,7 +26,9 @@ Data and logic live on the Node server.  Routes make the data and logic accessib
     * Features robust routing
     * HTTP helpers
     * Generates applications quickly
-
+* [Using res.sendFile()](https://scotch.io/tutorials/use-expressjs-to-deliver-html-files) to deliver HTML Files
+* [AJAX](https://www.w3schools.com/xml/ajax_intro.asp) stands for Asynchronous JavaScript And XML.  It is not a programming language. AJAX is a technique for accessing web servers from a web page.
+![](AJAX.png)
 
 # Authors
 
