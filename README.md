@@ -3,7 +3,7 @@ With this application, the goal is to have the front and the back end talk to ea
 Take  reservations or put people on a waiting list.  Also make new reservations and go back home from any page.  When server is restarted, the reservations will disappear because data is living only on the server, it is not hard coded.  
 
 # Getting Started
-![](coffe.jpg)
+![](assets/images/coffe.jpg)
 
 
 # Basic Structure
@@ -27,8 +27,9 @@ Data and logic live on the Node server.  Routes make the data and logic accessib
     * HTTP helpers
     * Generates applications quickly
 * [Using res.sendFile()](https://scotch.io/tutorials/use-expressjs-to-deliver-html-files) to deliver HTML Files
-* [AJAX](https://www.w3schools.com/xml/ajax_intro.asp) stands for Asynchronous JavaScript And XML.  It is not a programming language. AJAX is a technique for accessing web servers from a web page.
-![](AJAX.png)
+* [AJAX](https://www.w3schools.com/xml/ajax_intro.asp) is a technique for accessing web servers from a web page.  It stands for Asynchronous JavaScript And XML and it is not a programming language.
+
+![](assets/images/AJAX.png)
 
 # Authors
 
@@ -38,6 +39,13 @@ Data and logic live on the Node server.  Routes make the data and logic accessib
 This project is licensed under the [MIT](https://github.com/expressjs/body-parser/blob/master/LICENSE) License 
 
 # Acknowledgments
+
+You Tube 
+Boot Camp Github Respository
+Duy Do
+
+# To Do
+Run through Sequel Pro
 
 
 

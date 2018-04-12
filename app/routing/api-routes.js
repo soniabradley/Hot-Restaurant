@@ -12,4 +12,23 @@ module.exports = function (app) {
     app.get('/api/waitlist', function (req, res){
         res.json(waitingListData);
     })
+
+    app.post('/api/tables', function (req, res) {
+        if(tableData.length < 5) {
+            tableData.push(req.body);
+            res.json(true);
+        } else {
+            waitingListData.push(req.body);
+            res.json(false);
+        }
+    })
+
+    app.post('/api/clear', function(){
+        // Empty out all the arrays
+        tableData = [];
+        waitingListData = [];
+
+        console.log(tableData);
+        console.log(waitingListData);
+    })
 }
