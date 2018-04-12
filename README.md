@@ -40,9 +40,9 @@ This project is licensed under the [MIT](https://github.com/expressjs/body-parse
 
 # Acknowledgments
 
-You Tube 
-Boot Camp Github Respository
-Duy Do
+* You Tube 
+* Boot Camp Github Respository
+* Duy Do
 
 # To Do
 Run through Sequel Pro
